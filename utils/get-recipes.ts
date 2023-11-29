@@ -17,7 +17,7 @@ export const getRecipes = async (filters: SearchFilters) => {
       throw new Error("APP_ID or APP_KEY not found");
 
     const {
-      q = DEFAULT_SEARCH,
+      q = DEFAULT_SEARCH.toLowerCase(),
       to = 10,
       from = 0,
       cuisineType = "",

@@ -29,7 +29,9 @@ const SearchBar = () => {
     if (params.has("q")) {
       const q = decodeURIComponent(params.get("q") ?? DEFAULT_SEARCH);
       setQuery(`${q.charAt(0).toUpperCase()}${q.slice(1)}`);
+      return;
     }
+    setQuery(DEFAULT_SEARCH);
   }, []);
 
   return (
