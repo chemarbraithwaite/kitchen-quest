@@ -5,6 +5,7 @@ import SearchSelect from "./search-select";
 import SearchIcon from "./icons/search";
 import { useRouter } from "next/navigation";
 import { updateSearchParams } from "@/utils";
+import { DEFAULT_SEARCH } from "@/constants";
 
 const SearchBar = () => {
   const router = useRouter();
@@ -26,7 +27,7 @@ const SearchBar = () => {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     if (params.has("q")) {
-      const q = decodeURIComponent(params.get("q") ?? "");
+      const q = decodeURIComponent(params.get("q") ?? DEFAULT_SEARCH);
       setQuery(`${q.charAt(0).toUpperCase()}${q.slice(1)}`);
     }
   }, []);

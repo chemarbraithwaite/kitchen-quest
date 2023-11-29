@@ -156,3 +156,4 @@ export const footerLinks = [
 ];
 
 export const PAGE_SIZE = 10;
+export const DEFAULT_SEARCH = "healthy";

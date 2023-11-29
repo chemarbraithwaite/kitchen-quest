@@ -1,6 +1,7 @@
 import "server-only";
 
 import { RecipeSummary, SearchFilters } from "@/interface";
+import { DEFAULT_SEARCH } from "@/constants";
 
 const getQuantity = (quantity: any) => {
   if (typeof quantity === "number") {
@@ -16,7 +17,7 @@ export const getRecipes = async (filters: SearchFilters) => {
       throw new Error("APP_ID or APP_KEY not found");
 
     const {
-      q = "healthy",
+      q = DEFAULT_SEARCH,
       to = 10,
       from = 0,
       cuisineType = "",
