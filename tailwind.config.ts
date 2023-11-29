@@ -1,20 +1,32 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
+
+const PRIMARY = "#588d11";
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        "hero-bg": "url('/images/hero.webp')",
+      },
+      textColor: {
+        primary: PRIMARY,
+      },
+      backgroundColor: {
+        primary: PRIMARY,
+      },
+      maxWidth: {
+        "8xl": "1920px",
+      },
+      borderColor: {
+        primary: PRIMARY,
       },
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;
