@@ -39,7 +39,6 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-        <Script src="https://developer.edamam.com/attribution/badge.js" />
       </body>
     </html>
   );
