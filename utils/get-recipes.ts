@@ -41,7 +41,10 @@ export const getRecipes = async (filters: SearchFilters) => {
     if (mealType) searchParams.set("mealType", mealType);
 
     const response = await fetch(
-      `https://api.edamam.com/search?${searchParams.toString()}`
+      `https://api.edamam.com/search?${searchParams.toString()}`,
+      {
+        cache: "no-cache",
+      }
     );
 
     if (!response.ok) {
